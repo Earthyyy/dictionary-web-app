@@ -10,7 +10,7 @@ const PlayButton: FC<PlayButtonProps> = (props) => {
       className="cursor-pointer w-12 h-12 md:w-[4.6875rem] md:h-[4.6875rem] group"
       {...props}
     >
-      <g className="fill-primary" fill-rule="evenodd">
+      <g className="fill-primary" fillRule="evenodd">
         <circle
           cx="37.5"
           cy="37.5"
