@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -58,4 +61,74 @@ button,
 textarea,
 select {
     font: inherit;
+}
+
+
+:root {
+
+  /* COLORS */
+  --clr-error: #FF5252;
+  --clr-primary: #A445ED;
+  --clr-white: #FFFFFF;
+  --clr-gray-100: #F4F4F4;
+  --clr-gray-200: #E9E9E9;
+  --clr-gray-300: #757575;
+  --clr-gray-400: #3A3A3A;
+  --clr-gray-500: #2D2D2D;
+  --clr-gray-600: #1F1F1F;
+  --clr-gray-700: #050505;
+
+  --text-color-primary: var(--clr-primary);
+  --text-color-tertiary: var(--clr-gray-300);
+
+}
+
+
+.light {
+  --text-color-secondary: var(--clr-gray-500);
+  --input-bg-color: var(--clr-gray-100);
+  --toggle-bg-color: var(--clr-gray-300);
+}
+
+.dark {
+  --text-color-secondary: var(--clr-white);
+  --input-bg-color: var(--clr-gray-600);
+  --toggle-bg-color: var(--clr-primary);
+}
+
+
+.lora {
+  font-family: 'Lora', serif;
+}
+
+.inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.inconsolata {
+  font-family: 'Inconsolata', monospace;
+}
+
+
+
+@layer components {
+  .heading-lg {
+    @apply text-[4rem]/[4.8125rem] font-bold;
+  }
+
+  .heading-md {
+    @apply text-2xl/[1.8125rem] ;
+  }
+
+  .heading-sm {
+    @apply text-xl/6 ;
+  }
+
+  .body-md {
+    @apply text-lg/6 ;
+  }
+
+  .body-sm {
+    @apply text-sm/[1.0625rem] ;
+  }
 }
