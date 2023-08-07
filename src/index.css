@@ -80,6 +80,7 @@ select {
 
   --text-color-primary: var(--clr-primary);
   --text-color-tertiary: var(--clr-gray-300);
+  --separator-color: var(--clr-gray-200);
 
 }
 
@@ -88,12 +89,14 @@ select {
   --text-color-secondary: var(--clr-gray-500);
   --input-bg-color: var(--clr-gray-100);
   --toggle-bg-color: var(--clr-gray-300);
+  --bg-main: var(--clr-white);
 }
 
 .dark {
   --text-color-secondary: var(--clr-white);
   --input-bg-color: var(--clr-gray-600);
   --toggle-bg-color: var(--clr-primary);
+  --bg-main: var(--clr-gray-700);
 }
 
 
@@ -112,6 +115,11 @@ select {
 
 
 @layer components {
+
+  .ctnr {
+    @apply container mx-auto max-w-[46.125rem] px-6 tablet:px-[2.5rem] desktop:px-0
+  }
+
   .heading-lg {
     @apply text-[4rem]/[4.8125rem] font-bold;
   }

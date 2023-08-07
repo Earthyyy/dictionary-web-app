@@ -1,32 +1,26 @@
-import { useState } from "react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "../ui/DropDownMenu";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../ui/select";
+} from "../ui/Select";
 
 const FontSwitcher = () => {
   return (
     <Select defaultValue="sans">
-      <SelectTrigger className="w-[120px] border-none focus:ring-0">
+      <SelectTrigger className="w-fit gap-x-4 border-none ring-0 focus:ring-0 text-secondary">
         <SelectValue />
       </SelectTrigger>
-      <SelectContent className="body-md font-bold">
-        <SelectItem className="font-sans" value="sans">
+      {/* TODO: Fix SelectContent Background */}
+      <SelectContent>
+        <SelectItem className="font-sans body-md font-bold" value="sans">
           Sans serif
         </SelectItem>
-        <SelectItem className="font-serif" value="serif">
+        <SelectItem className="font-serif body-md font-bold" value="serif">
           Serif
         </SelectItem>
-        <SelectItem className="font-mono" value="mono">
+        <SelectItem className="font-mono body-md font-bold" value="mono">
           Mono
         </SelectItem>
       </SelectContent>
