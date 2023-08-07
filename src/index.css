@@ -121,7 +121,7 @@ select {
   }
 
   .heading-lg {
-    @apply text-[4rem]/[4.8125rem] font-bold;
+    @apply text-[2rem]/[2.5625rem] tablet:text-[4rem]/[4.8125rem] font-bold;
   }
 
   .heading-md {

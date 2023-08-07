@@ -1,12 +1,15 @@
-import PlayButton from "./components/custom/PlayButton";
-import ThemeSwitcher from "@/components/custom/ThemeSwitcher";
+import Navbar from "./components/Navbar";
+import SearchField from "./components/SearchField";
+import SearchResults from "./components/SearchResults";
 
 function App() {
   return (
-    <div className="light lora">
-      <h1 className="heading-lg">Hello, World</h1>
-      <PlayButton />
-      <ThemeSwitcher />
+    <div className="light lora min-h-screen bg-main">
+      <Navbar />
+      <main className="ctnr">
+        <SearchField />
+        <SearchResults />
+      </main>
     </div>
   );
 }

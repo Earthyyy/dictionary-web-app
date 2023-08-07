@@ -2,7 +2,7 @@ import { Search } from "lucide-react";
 
 const SearchField = () => {
   return (
-    <div className="ctnr">
+    <div className="mb-6 tablet:mb-[2.5rem] desktop:mb-[2.8125rem]">
       <div className="relative mb-1">
         <input
           type="text"
