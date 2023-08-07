@@ -40,6 +40,7 @@ export default {
         inputColor: "var(--input-bg-color)",
         toggleColor: "var(--toggle-bg-color)",
         separatorColor: "var(--separator-color)",
+        error: "var(--clr-error)",
       },
     },
   },
