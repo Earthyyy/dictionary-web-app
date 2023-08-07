@@ -12,13 +12,6 @@ export default {
       serif: ["Lora", "serif"],
       mono: ["Inconsolata", "monospace"],
     },
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       keyframes: {
         "accordion-down": {
@@ -40,11 +33,13 @@ export default {
         desktop: "1440px",
       },
       colors: {
+        main: "var(--bg-main)",
         primary: "var(--text-color-primary)",
         secondary: "var(--text-color-secondary)",
         tertiary: "var(--text-color-tertiary)",
         inputColor: "var(--input-bg-color)",
         toggleColor: "var(--toggle-bg-color)",
+        separatorColor: "var(--separator-color)",
       },
     },
   },
