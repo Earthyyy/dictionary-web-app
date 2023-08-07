@@ -4,7 +4,7 @@ import SearchResults from "./components/SearchResults";
 
 function App() {
   return (
-    <div className="light lora min-h-screen bg-main">
+    <div className="dark lora min-h-screen bg-main">
       <Navbar />
       <main className="ctnr">
         <SearchField />
