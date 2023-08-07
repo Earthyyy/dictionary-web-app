@@ -1,4 +1,4 @@
-import { Switch } from "../ui/switch";
+import { Switch } from "../ui/Switch";
 import { useState } from "react";
 
 const ThemeSwitcher = () => {
