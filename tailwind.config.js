@@ -7,6 +7,11 @@ export default {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+      serif: ["Lora", "serif"],
+      mono: ["Inconsolata", "monospace"],
+    },
     container: {
       center: true,
       padding: "2rem",
