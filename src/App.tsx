@@ -4,9 +4,9 @@ import SearchResults from "./components/SearchResults";
 
 function App() {
   return (
-    <div className="dark lora min-h-screen bg-main">
+    <div className="light inconsolata min-h-screen bg-main">
       <Navbar />
-      <main className="ctnr">
+      <main className="ctnr pb-16">
         <SearchField />
         <SearchResults />
       </main>

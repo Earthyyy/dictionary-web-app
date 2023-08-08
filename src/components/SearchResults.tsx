@@ -1,3 +1,4 @@
+import Source from "./Source";
 import Meanings from "./results/Meanings";
 import ResultHeader from "./results/ResultHeader";
 
@@ -6,6 +7,7 @@ const SearchResults = () => {
     <div>
       <ResultHeader />
       <Meanings />
+      <Source />
     </div>
   );
 };
