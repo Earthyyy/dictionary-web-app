@@ -1,14 +1,22 @@
 import { Switch } from "../ui/Switch";
 import { useState } from "react";
+import { FC } from "react";
 
-const ThemeSwitcher = () => {
+interface Props {
+  onSwitch: () => void;
+}
+
+const ThemeSwitcher: FC<Props> = ({ onSwitch }) => {
   const [checked, setChecked] = useState<boolean>(false);
   return (
     <div className="flex gap-5 items-center">
       <Switch
         className="data-[state=checked]:bg-primary data-[state=unchecked]:bg-tertiary"
         checked={checked}
-        onCheckedChange={(value) => setChecked(value)}
+        onCheckedChange={(value) => {
+          setChecked(value);
+          onSwitch();
+        }}
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"

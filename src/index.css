@@ -100,15 +100,15 @@ select {
 }
 
 
-.lora {
+.serif {
   font-family: 'Lora', serif;
 }
 
-.inter {
+.sans {
   font-family: 'Inter', sans-serif;
 }
 
-.inconsolata {
+.mono {
   font-family: 'Inconsolata', monospace;
 }
 

@@ -1,3 +1,4 @@
+import { FC } from "react";
 import {
   Select,
   SelectContent,
@@ -6,9 +7,13 @@ import {
   SelectValue,
 } from "../ui/Select";
 
-const FontSwitcher = () => {
+interface Props {
+  onChange: (font: string) => void;
+}
+
+const FontSwitcher: FC<Props> = ({ onChange }) => {
   return (
-    <Select defaultValue="sans">
+    <Select defaultValue="sans" onValueChange={(font) => onChange(font)}>
       <SelectTrigger className="w-fit gap-x-4 border-none ring-0 focus:ring-0 text-secondary">
         <SelectValue />
       </SelectTrigger>
