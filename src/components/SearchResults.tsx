@@ -6,8 +6,6 @@ import { useQuery } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
 import NotFound from "./NotFound";
 
-const API_URL = import.meta.env.VITE_API_URL;
-
 interface Props {
   search: string;
 }
@@ -18,7 +16,9 @@ const SearchResults: FC<Props> = ({ search }) => {
     queryFn: async () => {
       let res;
       try {
-        res = await axios.get(`${API_URL}/${search}`);
+        res = await axios.get(
+          `https://api.dictionaryapi.dev/api/v2/entries/en/${search}`
+        );
       } catch (error) {
         if (error instanceof AxiosError) {
           if (error.response?.status === 404) {
