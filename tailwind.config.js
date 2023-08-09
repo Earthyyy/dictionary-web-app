@@ -41,6 +41,7 @@ export default {
         toggleColor: "var(--toggle-bg-color)",
         separatorColor: "var(--separator-color)",
         error: "var(--clr-error)",
+        shell: "var(--bg-shell)",
       },
     },
   },

@@ -90,6 +90,7 @@ select {
   --input-bg-color: var(--clr-gray-100);
   --toggle-bg-color: var(--clr-gray-300);
   --bg-main: var(--clr-white);
+  --bg-shell: rgb(245 245 245);
 }
 
 .dark {
@@ -97,6 +98,7 @@ select {
   --input-bg-color: var(--clr-gray-600);
   --toggle-bg-color: var(--clr-primary);
   --bg-main: var(--clr-gray-700);
+  --bg-shell: rgb(38 38 38);
 }
 
 
