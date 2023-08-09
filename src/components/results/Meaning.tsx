@@ -1,11 +1,18 @@
 import { FC } from "react";
-import type { meaning } from "./Meanings";
 
-interface MeaningProps {
-  data: meaning;
+interface Props {
+  data: {
+    partOfSpeech: string;
+    definitions: {
+      definition: string;
+      example?: string;
+      synonyms?: string[];
+    }[];
+    synonyms: string[];
+  };
 }
 
-const Meaning: FC<MeaningProps> = ({ data }) => {
+const Meaning: FC<Props> = ({ data }) => {
   return (
     <div className="pb-10">
       <div className="partOfSpeech | flex items-center gap-[1.125rem] tablet:gap-[1.4375rem] mb-8 tablet:mb-10">

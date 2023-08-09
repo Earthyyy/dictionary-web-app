@@ -1,20 +1,45 @@
 import { Search } from "lucide-react";
+import { FC } from "react";
+import { useForm } from "react-hook-form";
 
-const SearchField = () => {
+interface Props {
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
+}
+
+type Input = {
+  search: string;
+};
+
+const SearchField: FC<Props> = ({ setSearch }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Input>();
+
+  const onSubmit = (data: Input) => {
+    setSearch(data.search);
+  };
+
   return (
     <div className="mb-6 tablet:mb-[2.5rem] desktop:mb-[2.8125rem]">
-      <div className="relative mb-1">
+      <form className="relative mb-1" onSubmit={handleSubmit(onSubmit)}>
         <input
           type="text"
           className="flex-1 border border-inputColor outline-none  font-bold body-xs placeholder:font-bold placeholder:text-opacity-25  text-secondary bg-inputColor py-[0.875rem] px-6 rounded-2xl w-full focus:border-primary invalid:border-error"
           placeholder="Search for any word..."
+          {...register("search", { required: true })}
         />
-        <button>
+        <button type="submit">
           <Search className="text-primary w-4 h-4 absolute right-6 bottom-1/2 translate-y-1/2" />
         </button>
-      </div>
+      </form>
       {/* Error message */}
-      <p className="text-error body-md font-normal"></p>
+      {errors.search && (
+        <p className="text-error body-md font-normal">
+          Whoops, can’t be empty…
+        </p>
+      )}
     </div>
   );
 };
