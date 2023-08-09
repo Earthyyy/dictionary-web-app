@@ -3,7 +3,7 @@ import Source from "./Source";
 import Meanings from "./results/Meanings";
 import ResultHeader from "./results/ResultHeader";
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import NotFound from "./NotFound";
 
 const API_URL = import.meta.env.VITE_API_URL;
@@ -20,9 +20,14 @@ const SearchResults: FC<Props> = ({ search }) => {
       try {
         res = await axios.get(`${API_URL}/${search}`);
       } catch (error) {
-        return [];
+        if (error instanceof AxiosError) {
+          if (error.response?.status === 404) {
+            return [];
+          }
+          throw error;
+        }
       }
-      return res.data;
+      return res?.data;
     },
     enabled: search !== "",
     retry: false,

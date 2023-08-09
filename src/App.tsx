@@ -4,6 +4,8 @@ import SearchField from "./components/SearchField";
 import SearchResults from "./components/SearchResults";
 import { Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
+import ResultShell from "./components/loaders/ResultShell";
+import Error from "./components/Error";
 
 function App() {
   const [theme, setTheme] = useState<string>("light");
@@ -23,8 +25,8 @@ function App() {
       <Navbar toggleTheme={toggleTheme} changeFont={changeFont} />
       <main className="ctnr pb-16">
         <SearchField setSearch={setSearch} />
-        <Suspense fallback={<div>Loading...</div>}>
-          <ErrorBoundary fallback={<div>Error !</div>}>
+        <Suspense fallback={<ResultShell />}>
+          <ErrorBoundary fallback={<Error />}>
             <SearchResults search={search} />
           </ErrorBoundary>
         </Suspense>
