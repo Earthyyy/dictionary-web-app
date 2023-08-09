@@ -26,7 +26,9 @@ const SearchField: FC<Props> = ({ setSearch }) => {
       <form className="relative mb-1" onSubmit={handleSubmit(onSubmit)}>
         <input
           type="text"
-          className="flex-1 border border-inputColor outline-none  font-bold body-xs placeholder:font-bold placeholder:text-opacity-25  text-secondary bg-inputColor py-[0.875rem] pl-6 pr-11 rounded-2xl w-full focus:border-primary invalid:border-error"
+          className={`flex-1 border border-inputColor outline-none  font-bold body-xs placeholder:font-bold placeholder:text-opacity-25  text-secondary bg-inputColor py-[0.875rem] pl-6 pr-11 rounded-2xl w-full focus:border-primary hover:border-primary ${
+            errors.search && "border-error focus:border-error"
+          }`}
           placeholder="Search for any word..."
           {...register("search", { required: true })}
         />
